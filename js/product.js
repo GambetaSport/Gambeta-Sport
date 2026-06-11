@@ -65,7 +65,7 @@ const Producto = {
   },
 
   /* Dibuja las telas disponibles del producto. */
- _pintarTelas() {
+_pintarTelas() {
   const cont = document.getElementById("telas");
   const telas = this.datos.telas || [];
   if (telas.length === 0) {
@@ -86,7 +86,7 @@ const Producto = {
       this._actualizarBotonWhatsApp();
     });
   });
-},
+}
 
   /* Arma el link de WhatsApp con el mensaje pre-escrito. */
   _actualizarBotonWhatsApp() {
