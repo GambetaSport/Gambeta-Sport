@@ -65,26 +65,28 @@ const Producto = {
   },
 
   /* Dibuja las telas disponibles del producto. */
-  _pintarTelas() {
-    const cont = document.getElementById("telas");
-    const telas = this.datos.telas || [];
-    if (telas.length === 0) {
-      cont.parentElement.style.display = "none";
-      return;
-    }
-    cont.innerHTML = telas.map(t => Componentes.tela(t)).join("");
+ _pintarTelas() {
+  const cont = document.getElementById("telas");
+  const telas = this.datos.telas || [];
+  if (telas.length === 0) {
+    cont.parentElement.style.display = "none";
+    return;
+  }
+  cont.innerHTML = telas.map(t => {
+    const img = this.datos.telasImagenes ? this.datos.telasImagenes[t] : null;
+    return Componentes.tela(t, img);
+  }).join("");
 
-    // Permitir elegir la tela para el mensaje de WhatsApp.
-    cont.querySelectorAll(".tela").forEach((el, i) => {
-      el.addEventListener("click", () => {
-        cont.querySelectorAll(".tela")
-          .forEach(t => t.style.borderColor = "var(--borde)");
-        el.style.borderColor = "var(--acento)";
-        this.telaElegida = telas[i];
-        this._actualizarBotonWhatsApp();
-      });
+  cont.querySelectorAll(".tela").forEach((el, i) => {
+    el.addEventListener("click", () => {
+      cont.querySelectorAll(".tela")
+        .forEach(t => t.style.borderColor = "var(--borde)");
+      el.style.borderColor = "var(--acento)";
+      this.telaElegida = telas[i];
+      this._actualizarBotonWhatsApp();
     });
-  },
+  });
+}
 
   /* Arma el link de WhatsApp con el mensaje pre-escrito. */
   _actualizarBotonWhatsApp() {
