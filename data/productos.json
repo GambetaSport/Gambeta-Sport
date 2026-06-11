@@ -1,8 +1,8 @@
 [
   {
-    "id": "pro-training-v2",
+    "id": "Atuendo Deportivo",
     "nombre": "Pro Training V2",
-    "categoria": "Entrenamiento",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["DryFit", "Mesh"],
     "colores": ["Negro", "Azul"],
@@ -13,9 +13,9 @@
     }
   },
   {
-    "id": "air-series",
+    "id": "Atuendo Deportivo",
     "nombre": "Air Series",
-    "categoria": "Running",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Mesh"],
     "colores": ["Negro", "Verde"],
@@ -26,9 +26,9 @@
     }
   },
   {
-    "id": "classic-fit",
+    "id": "Atuendo Deportivo",
     "nombre": "Classic Fit",
-    "categoria": "Casual",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón"],
     "colores": ["Blanco", "Negro"],
@@ -39,9 +39,9 @@
     }
   },
   {
-    "id": "polo-sport",
+    "id": "Atuendo Deportivo",
     "nombre": "Polo Sport",
-    "categoria": "Tenis",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Piqué"],
     "colores": ["Blanco", "Rojo"],
@@ -52,9 +52,9 @@
     }
   },
   {
-    "id": "elite-compression",
+    "id": "Atuendo Deportivo",
     "nombre": "Elite Compression",
-    "categoria": "Entrenamiento",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["DryFit"],
     "colores": ["Negro", "Rojo"],
@@ -65,9 +65,9 @@
     }
   },
   {
-    "id": "urban-tee",
+    "id": "Atuendo Deportivo",
     "nombre": "Urban Tee",
-    "categoria": "Casual",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón", "Mesh"],
     "colores": ["Amarillo", "Negro"],
@@ -78,9 +78,9 @@
     }
   },
   {
-    "id": "sport-flex",
+    "id": "Atuendo Deportivo",
     "nombre": "Sport Flex",
-    "categoria": "Deportiva",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["DryFit"],
     "colores": ["Negro"],
@@ -91,9 +91,9 @@
     }
   },
   {
-    "id": "comfort-plus",
+    "id": "Atuendo Deportivo",
     "nombre": "Comfort Plus",
-    "categoria": "Casual",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón"],
     "colores": ["Blanco"],
@@ -104,9 +104,9 @@
     }
   },
   {
-    "id": "performance-max",
+    "id": "Atuendo Deportivo",
     "nombre": "Performance Max",
-    "categoria": "Running",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Mesh"],
     "colores": ["Azul"],
@@ -117,9 +117,9 @@
     }
   },
   {
-    "id": "stylish-wear",
+    "id": "Atuendo Deportivor",
     "nombre": "Stylish Wear",
-    "categoria": "Casual",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón"],
     "colores": ["Verde"],
@@ -130,9 +130,9 @@
     }
   },
   {
-    "id": "active-zone",
+    "id": "Atuendo Deportivo",
     "nombre": "Active Zone",
-    "categoria": "Entrenamiento",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["DryFit"],
     "colores": ["Rojo"],
@@ -143,9 +143,9 @@
     }
   },
   {
-    "id": "essential-basic",
+    "id": "Atuendo Deportivo",
     "nombre": "Essential Basic",
-    "categoria": "Casual",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón"],
     "colores": ["Negro"],
@@ -156,9 +156,9 @@
     }
   },
   {
-    "id": "premium-fit",
+    "id": "Atuendo Deportivo",
     "nombre": "Premium Fit",
-    "categoria": "Deportiva",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Piqué"],
     "colores": ["Azul"],
@@ -169,9 +169,9 @@
     }
   },
   {
-    "id": "venture-series",
+    "id": "Atuendo Deportivo",
     "nombre": "Venture Series",
-    "categoria": "Running",
+    "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Mesh"],
     "colores": ["Amarillo"],
