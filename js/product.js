@@ -2,6 +2,7 @@
    product.js  —  LÓGICA DE LA FICHA DE PRODUCTO
    ============================================================ */
 
+
 const Producto = {
 
   datos: null,
