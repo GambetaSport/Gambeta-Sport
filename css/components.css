@@ -188,7 +188,12 @@
   position: relative;
   overflow: hidden;
 }
-.galeria__imagen img { width: 100%; height: 100%; object-fit: cover; }
+.galeria__imagen img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain;
+  padding: 8px;
+}
 .galeria__placeholder { display: flex; align-items: center; justify-content: center; }
 .galeria__placeholder svg { width: 35%; height: 35%; opacity: 0.4; }
 .galeria__zoom-badge {
