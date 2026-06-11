@@ -7,9 +7,9 @@
     "telas": ["DryFit", "Mesh"],
     "colores": ["Negro", "Azul"],
     "imagenes": {
-      "mockup": "",
-      "real": "",
-      "detalle": ""
+      "mockup": "https://i.ibb.co/Y46pDQg6/SAM-JOSE-OBRERO.jpg",
+      "real": "https://i.ibb.co/Y46pDQg6/SAM-JOSE-OBRERO.jpg",
+      "detalle": "https://i.ibb.co/Y46pDQg6/SAM-JOSE-OBRERO.jpg"
     }
   },
   {
@@ -20,9 +20,9 @@
     "telas": ["Mesh"],
     "colores": ["Negro", "Verde"],
     "imagenes": {
-      "mockup": "",
-      "real": "",
-      "detalle": ""
+      "mockup": "https://i.ibb.co/x833F9CV/SAN-FRANCISCO-3.jpg",
+      "real": "https://i.ibb.co/x833F9CV/SAN-FRANCISCO-3.jpg",
+      "detalle": "https://i.ibb.co/x833F9CV/SAN-FRANCISCO-3.jpg"
     }
   },
   {
@@ -33,9 +33,9 @@
     "telas": ["Algodón"],
     "colores": ["Blanco", "Negro"],
     "imagenes": {
-      "mockup": "",
-      "real": "",
-      "detalle": ""
+      "mockup": "https://i.ibb.co/nNYvQw5z/SAN-FRANCISCO.jpg",
+      "real": "https://i.ibb.co/nNYvQw5z/SAN-FRANCISCO.jpg",
+      "detalle": "https://i.ibb.co/nNYvQw5z/SAN-FRANCISCO.jpg"
     }
   },
   {
@@ -46,9 +46,9 @@
     "telas": ["Piqué"],
     "colores": ["Blanco", "Rojo"],
     "imagenes": {
-      "mockup": "",
-      "real": "",
-      "detalle": ""
+      "mockup": "https://i.ibb.co/Z11KN9Vp/SAN-LORENZO.jpg",
+      "real": "https://i.ibb.co/Z11KN9Vp/SAN-LORENZO.jpg",
+      "detalle": "https://i.ibb.co/Z11KN9Vp/SAN-LORENZO.jpg"
     }
   },
   {
@@ -59,9 +59,9 @@
     "telas": ["DryFit"],
     "colores": ["Negro", "Rojo"],
     "imagenes": {
-      "mockup": "",
-      "real": "",
-      "detalle": ""
+      "mockup": "https://i.ibb.co/yFRhT6tH/SAN-LORENZO1.jpg",
+      "real": "https://i.ibb.co/yFRhT6tH/SAN-LORENZO1.jpg",
+      "detalle": "https://i.ibb.co/yFRhT6tH/SAN-LORENZO1.jpg"
     }
   },
   {
@@ -72,9 +72,113 @@
     "telas": ["Algodón", "Mesh"],
     "colores": ["Amarillo", "Negro"],
     "imagenes": {
-      "mockup": "",
-      "real": "",
-      "detalle": ""
+      "mockup": "https://i.ibb.co/fVq1PZFY/8-de-Diciembre-3.jpg",
+      "real": "https://i.ibb.co/fVq1PZFY/8-de-Diciembre-3.jpg",
+      "detalle": "https://i.ibb.co/fVq1PZFY/8-de-Diciembre-3.jpg"
+    }
+  },
+  {
+    "id": "sport-flex",
+    "nombre": "Sport Flex",
+    "categoria": "Deportiva",
+    "activo": true,
+    "telas": ["DryFit"],
+    "colores": ["Negro"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/pmWW47m/8-de-Diciembre-4.jpg",
+      "real": "https://i.ibb.co/pmWW47m/8-de-Diciembre-4.jpg",
+      "detalle": "https://i.ibb.co/pmWW47m/8-de-Diciembre-4.jpg"
+    }
+  },
+  {
+    "id": "comfort-plus",
+    "nombre": "Comfort Plus",
+    "categoria": "Casual",
+    "activo": true,
+    "telas": ["Algodón"],
+    "colores": ["Blanco"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/1fXw5QVV/13-DE-JULIO-1.jpg",
+      "real": "https://i.ibb.co/1fXw5QVV/13-DE-JULIO-1.jpg",
+      "detalle": "https://i.ibb.co/1fXw5QVV/13-DE-JULIO-1.jpg"
+    }
+  },
+  {
+    "id": "performance-max",
+    "nombre": "Performance Max",
+    "categoria": "Running",
+    "activo": true,
+    "telas": ["Mesh"],
+    "colores": ["Azul"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/fYd6NHgg/13-DE-JULIO-2.jpg",
+      "real": "https://i.ibb.co/fYd6NHgg/13-DE-JULIO-2.jpg",
+      "detalle": "https://i.ibb.co/fYd6NHgg/13-DE-JULIO-2.jpg"
+    }
+  },
+  {
+    "id": "stylish-wear",
+    "nombre": "Stylish Wear",
+    "categoria": "Casual",
+    "activo": true,
+    "telas": ["Algodón"],
+    "colores": ["Verde"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/wrMzRZMJ/14-DE-MAYO-J.jpg",
+      "real": "https://i.ibb.co/wrMzRZMJ/14-DE-MAYO-J.jpg",
+      "detalle": "https://i.ibb.co/wrMzRZMJ/14-DE-MAYO-J.jpg"
+    }
+  },
+  {
+    "id": "active-zone",
+    "nombre": "Active Zone",
+    "categoria": "Entrenamiento",
+    "activo": true,
+    "telas": ["DryFit"],
+    "colores": ["Rojo"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/B2WLkrH2/14-DE-MAYO-P.jpg",
+      "real": "https://i.ibb.co/B2WLkrH2/14-DE-MAYO-P.jpg",
+      "detalle": "https://i.ibb.co/B2WLkrH2/14-DE-MAYO-P.jpg"
+    }
+  },
+  {
+    "id": "essential-basic",
+    "nombre": "Essential Basic",
+    "categoria": "Casual",
+    "activo": true,
+    "telas": ["Algodón"],
+    "colores": ["Negro"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/XxL8L6b6/Club-puerto.jpg",
+      "real": "https://i.ibb.co/XxL8L6b6/Club-puerto.jpg",
+      "detalle": "https://i.ibb.co/XxL8L6b6/Club-puerto.jpg"
+    }
+  },
+  {
+    "id": "premium-fit",
+    "nombre": "Premium Fit",
+    "categoria": "Deportiva",
+    "activo": true,
+    "telas": ["Piqué"],
+    "colores": ["Azul"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/ccWdDdJp/DIEGO.png",
+      "real": "https://i.ibb.co/ccWdDdJp/DIEGO.png",
+      "detalle": "https://i.ibb.co/ccWdDdJp/DIEGO.png"
+    }
+  },
+  {
+    "id": "venture-series",
+    "nombre": "Venture Series",
+    "categoria": "Running",
+    "activo": true,
+    "telas": ["Mesh"],
+    "colores": ["Amarillo"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/QvSLm9mL/palmital.jpg",
+      "real": "https://i.ibb.co/QvSLm9mL/palmital.jpg",
+      "detalle": "https://i.ibb.co/QvSLm9mL/palmital.jpg"
     }
   }
 ]
