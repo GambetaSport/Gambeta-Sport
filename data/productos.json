@@ -1,10 +1,14 @@
 [
   {
-    "id": "Atuendo Deportivo",
+    "id": "pro-training-v2",
     "nombre": "Pro Training V2",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["DryFit", "Mesh"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
     "colores": ["Negro", "Azul"],
     "imagenes": {
       "mockup": "https://i.ibb.co/Y46pDQg6/SAM-JOSE-OBRERO.jpg",
@@ -13,11 +17,14 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "air-series",
     "nombre": "Air Series",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Mesh"],
+    "telasImagenes": {
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
     "colores": ["Negro", "Verde"],
     "imagenes": {
       "mockup": "https://i.ibb.co/x833F9CV/SAN-FRANCISCO-3.jpg",
@@ -26,11 +33,12 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "classic-fit",
     "nombre": "Classic Fit",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón"],
+    "telasImagenes": {},
     "colores": ["Blanco", "Negro"],
     "imagenes": {
       "mockup": "https://i.ibb.co/nNYvQw5z/SAN-FRANCISCO.jpg",
@@ -39,11 +47,12 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "polo-sport",
     "nombre": "Polo Sport",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Piqué"],
+    "telasImagenes": {},
     "colores": ["Blanco", "Rojo"],
     "imagenes": {
       "mockup": "https://i.ibb.co/Z11KN9Vp/SAN-LORENZO.jpg",
@@ -52,11 +61,14 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "elite-compression",
     "nombre": "Elite Compression",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["DryFit"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg"
+    },
     "colores": ["Negro", "Rojo"],
     "imagenes": {
       "mockup": "https://i.ibb.co/yFRhT6tH/SAN-LORENZO1.jpg",
@@ -65,11 +77,14 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "urban-tee",
     "nombre": "Urban Tee",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón", "Mesh"],
+    "telasImagenes": {
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
     "colores": ["Amarillo", "Negro"],
     "imagenes": {
       "mockup": "https://i.ibb.co/fVq1PZFY/8-de-Diciembre-3.jpg",
@@ -78,11 +93,14 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "sport-flex",
     "nombre": "Sport Flex",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["DryFit"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg"
+    },
     "colores": ["Negro"],
     "imagenes": {
       "mockup": "https://i.ibb.co/pmWW47m/8-de-Diciembre-4.jpg",
@@ -91,11 +109,12 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "comfort-plus",
     "nombre": "Comfort Plus",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón"],
+    "telasImagenes": {},
     "colores": ["Blanco"],
     "imagenes": {
       "mockup": "https://i.ibb.co/1fXw5QVV/13-DE-JULIO-1.jpg",
@@ -104,11 +123,14 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "performance-max",
     "nombre": "Performance Max",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Mesh"],
+    "telasImagenes": {
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
     "colores": ["Azul"],
     "imagenes": {
       "mockup": "https://i.ibb.co/fYd6NHgg/13-DE-JULIO-2.jpg",
@@ -117,11 +139,12 @@
     }
   },
   {
-    "id": "Atuendo Deportivor",
+    "id": "stylish-wear",
     "nombre": "Stylish Wear",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón"],
+    "telasImagenes": {},
     "colores": ["Verde"],
     "imagenes": {
       "mockup": "https://i.ibb.co/wrMzRZMJ/14-DE-MAYO-J.jpg",
@@ -130,11 +153,14 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "active-zone",
     "nombre": "Active Zone",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["DryFit"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg"
+    },
     "colores": ["Rojo"],
     "imagenes": {
       "mockup": "https://i.ibb.co/B2WLkrH2/14-DE-MAYO-P.jpg",
@@ -143,11 +169,12 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "essential-basic",
     "nombre": "Essential Basic",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Algodón"],
+    "telasImagenes": {},
     "colores": ["Negro"],
     "imagenes": {
       "mockup": "https://i.ibb.co/XxL8L6b6/Club-puerto.jpg",
@@ -156,11 +183,12 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "premium-fit",
     "nombre": "Premium Fit",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Piqué"],
+    "telasImagenes": {},
     "colores": ["Azul"],
     "imagenes": {
       "mockup": "https://i.ibb.co/ccWdDdJp/DIEGO.png",
@@ -169,11 +197,14 @@
     }
   },
   {
-    "id": "Atuendo Deportivo",
+    "id": "venture-series",
     "nombre": "Venture Series",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Mesh"],
+    "telasImagenes": {
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
     "colores": ["Amarillo"],
     "imagenes": {
       "mockup": "https://i.ibb.co/QvSLm9mL/palmital.jpg",
