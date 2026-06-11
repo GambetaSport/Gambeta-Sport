@@ -1,17 +1,13 @@
-/* ============================================================
-   components.css  —  COMPONENTES VISUALES
-   ------------------------------------------------------------
-   Cómo se ve cada pieza reutilizable: header, buscador, filtro,
-   cards de producto, galería, telas, botón de WhatsApp.
-   Para rediseñar una pieza, tocás solo su bloque acá.
-   ============================================================ */
+==================================================== */
 
 /* --- Header con logo --- */
 .header {
+   
   text-align: center;
   padding: var(--esp-lg) var(--esp-md);
   border-bottom: 1px solid var(--superficie-2);
 }
+
 .header__logo {
   height: 34px;
   margin: 0 auto;
@@ -22,7 +18,16 @@
   letter-spacing: 3px;
   margin-top: var(--esp-xs);
 }
+.header__logo-img {
+     max-width: 200px;
+     height: auto;
+     margin: 0 auto;
+   }
 
+   .barra__marca-img {
+     max-width: 120px;
+     height: auto;
+   }
 /* --- Buscador --- */
 .buscador {
   display: flex;
