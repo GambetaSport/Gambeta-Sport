@@ -86,7 +86,7 @@ const Producto = {
       this._actualizarBotonWhatsApp();
     });
   });
-}
+},
 
   /* Arma el link de WhatsApp con el mensaje pre-escrito. */
   _actualizarBotonWhatsApp() {
