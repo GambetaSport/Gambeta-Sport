@@ -1,0 +1,39 @@
+/* ============================================================
+   variables.css  —  TOKENS DE DISEÑO
+   ------------------------------------------------------------
+   Valores base. Los colores de marca (--acento, --fondo, etc.)
+   los inyecta config.js, así que acá van solo los valores por
+   defecto y los tokens que no dependen del cliente (espaciado,
+   tamaños, radios).
+   ============================================================ */
+
+:root {
+  /* Colores (valores por defecto; config.js los puede sobreescribir) */
+  --fondo: #0c0c0c;
+  --superficie: #141414;
+  --superficie-2: #1a1a1a;
+  --borde: #252525;
+  --acento: #FAC775;
+  --texto: #ffffff;
+  --texto-tenue: #888888;
+  --texto-suave: #555555;
+  --whatsapp: #25D366;
+
+  /* Tipografía */
+  --fuente: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Espaciado */
+  --esp-xs: 6px;
+  --esp-sm: 10px;
+  --esp-md: 16px;
+  --esp-lg: 24px;
+  --esp-xl: 40px;
+
+  /* Radios de borde */
+  --radio-sm: 6px;
+  --radio-md: 8px;
+  --radio-lg: 12px;
+
+  /* Ancho máximo del contenido en pantallas grandes */
+  --ancho-max: 1100px;
+}

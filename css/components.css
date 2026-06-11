@@ -1,0 +1,238 @@
+/* ============================================================
+   components.css  —  COMPONENTES VISUALES
+   ------------------------------------------------------------
+   Cómo se ve cada pieza reutilizable: header, buscador, filtro,
+   cards de producto, galería, telas, botón de WhatsApp.
+   Para rediseñar una pieza, tocás solo su bloque acá.
+   ============================================================ */
+
+/* --- Header con logo --- */
+.header {
+  text-align: center;
+  padding: var(--esp-lg) var(--esp-md);
+  border-bottom: 1px solid var(--superficie-2);
+}
+.header__logo {
+  height: 34px;
+  margin: 0 auto;
+}
+.header__subtitulo {
+  color: var(--texto-suave);
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: var(--esp-xs);
+}
+
+/* --- Buscador --- */
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-sm);
+  background: var(--superficie-2);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-md);
+  padding: 11px 14px;
+}
+.buscador__icono { color: var(--texto-suave); flex-shrink: 0; }
+.buscador__input {
+  background: none;
+  border: none;
+  color: var(--texto);
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+}
+.buscador__input::placeholder { color: var(--texto-suave); }
+
+/* --- Filtro desplegable --- */
+.filtro__toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--superficie-2);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-md);
+  padding: 11px 14px;
+  color: var(--texto-tenue);
+  font-size: 14px;
+}
+.filtro__toggle-label { display: flex; align-items: center; gap: var(--esp-sm); }
+.filtro__chevron { transition: transform 0.2s ease; }
+.filtro__toggle[aria-expanded="true"] .filtro__chevron { transform: rotate(180deg); }
+
+.filtro__panel {
+  display: none;
+  flex-wrap: wrap;
+  gap: var(--esp-md);
+  padding: var(--esp-md) var(--esp-xs) 0;
+}
+.filtro__panel.abierto { display: flex; }
+
+.filtro__color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  opacity: 0.45;
+  transition: opacity 0.15s ease;
+}
+.filtro__color.activo { opacity: 1; }
+.filtro__color-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.filtro__color.activo .filtro__color-dot { border-color: var(--acento); }
+.filtro__color-nombre { color: var(--texto-tenue); font-size: 10px; }
+
+/* --- Grilla de productos (galería de fotos) --- */
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* --- Card de producto (ahora es solo la imagen) --- */
+.card {
+  aspect-ratio: 1 / 1;
+  background: var(--superficie);
+  border: 1px solid var(--superficie-2);
+  border-radius: var(--radio-md);
+  overflow: hidden;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card:hover { 
+  border-color: var(--acento);
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(250, 199, 117, 0.1);
+}
+.card__imagen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--superficie-2);
+  overflow: hidden;
+}
+.card__imagen img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+.card__placeholder {
+  width: 100%; 
+  height: 100%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+.card__placeholder svg { 
+  width: 45%; 
+  height: 45%; 
+  opacity: 0.3; 
+}
+
+/* --- Etiqueta de sección --- */
+.seccion-label {
+  color: var(--texto-suave);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--esp-sm);
+}
+
+/* --- Mensaje de estado vacío / sin resultados --- */
+.vacio {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--texto-suave);
+  padding: var(--esp-xl) 0;
+  font-size: 14px;
+}
+
+/* ============================================================
+   FICHA DE PRODUCTO
+   ============================================================ */
+
+/* --- Barra superior con volver --- */
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--esp-md);
+  border-bottom: 1px solid var(--superficie-2);
+}
+.barra__volver { display: flex; align-items: center; color: var(--texto); }
+.barra__marca { color: var(--acento); font-weight: 500; letter-spacing: 3px; font-size: 14px; }
+
+/* --- Galería con tres vistas --- */
+.galeria__imagen {
+  aspect-ratio: 1 / 1;
+  background: var(--superficie);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.galeria__imagen img { width: 100%; height: 100%; object-fit: cover; }
+.galeria__placeholder { display: flex; align-items: center; justify-content: center; }
+.galeria__placeholder svg { width: 35%; height: 35%; opacity: 0.4; }
+.galeria__zoom-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: var(--acento);
+  color: #111;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: var(--radio-sm);
+}
+.galeria__vistas {
+  display: flex;
+  border-bottom: 1px solid var(--superficie-2);
+}
+.galeria__vista {
+  padding: 12px 18px;
+  font-size: 12px;
+  color: var(--texto-suave);
+  border-bottom: 2px solid transparent;
+}
+.galeria__vista.activo { color: var(--acento); border-bottom-color: var(--acento); }
+
+/* --- Telas como mosaico visual --- */
+.telas { display: flex; gap: var(--esp-sm); flex-wrap: wrap; }
+.tela {
+  flex: 1;
+  min-width: 70px;
+  background: var(--superficie-2);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  padding: 12px 8px;
+  text-align: center;
+}
+.tela__nombre { color: var(--texto-tenue); font-size: 11px; margin-top: 6px; }
+
+/* --- Botón de WhatsApp --- */
+.boton-whatsapp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-sm);
+  background: var(--whatsapp);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: var(--radio-md);
+  transition: filter 0.15s ease;
+}
+.boton-whatsapp:hover { filter: brightness(1.08); }

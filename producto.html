@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto</title>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <script src="js/config.js"></script>
+</head>
+<body>
+
+  <div class="contenedor">
+
+    <!-- Barra superior con volver -->
+    <div class="barra">
+      <a class="barra__volver" href="index.html" aria-label="Volver al catálogo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </a>
+      <span class="barra__marca" id="marca"></span>
+      <div style="width:24px"></div>
+    </div>
+
+    <!-- Galería: imagen grande + selector de vistas -->
+    <section class="galeria">
+      <div class="galeria__imagen" id="galeria-imagen"></div>
+      <div class="galeria__vistas">
+        <button class="galeria__vista activo" data-vista="mockup" type="button">Mockup</button>
+        <button class="galeria__vista" data-vista="real" type="button">Real</button>
+        <button class="galeria__vista" data-vista="detalle" type="button">Detalle</button>
+      </div>
+    </section>
+
+    <!-- Información del producto: nombre, telas y WhatsApp -->
+    <section class="producto-info">
+      <div class="producto-info__categoria" id="categoria"></div>
+      <div class="producto-info__nombre" id="nombre"></div>
+
+      <!-- Telas disponibles -->
+      <div class="producto-info__bloque">
+        <div class="seccion-label">Tipo de tela</div>
+        <div class="telas" id="telas"></div>
+      </div>
+
+      <!-- Botón de WhatsApp -->
+      <a id="boton-whatsapp" class="boton-whatsapp" type="button"
+         href="#" target="_blank" rel="noopener">
+        <!-- Ícono y texto se generan en product.js -->
+      </a>
+    </section>
+
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

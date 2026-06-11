@@ -1,0 +1,58 @@
+/* ============================================================
+   layout.css  —  ESTRUCTURA DE LAS PÁGINAS
+   ------------------------------------------------------------
+   El sitio es mobile-first: primero se diseña para celular,
+   y en pantallas grandes se centra y se amplía la grilla.
+   ============================================================ */
+
+/* Contenedor central. En móvil ocupa todo; en desktop se limita. */
+.contenedor {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Secciones con respiro horizontal */
+.seccion { padding: var(--esp-md); }
+.seccion--ajustada { padding: var(--esp-sm) var(--esp-md) var(--esp-md); }
+
+/* Ficha de producto: bloque de información debajo de la galería */
+.producto-info { padding: var(--esp-md); }
+.producto-info__categoria {
+  color: var(--acento);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.producto-info__nombre {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 4px 0 var(--esp-lg);
+}
+.producto-info__bloque { margin-bottom: var(--esp-lg); }
+
+/* --- Pantallas grandes: galerías más amplias --- */
+@media (min-width: 700px) {
+  .contenedor { max-width: var(--ancho-max); }
+
+  /* En tablet: 3 columnas. En desktop: 4 columnas. */
+  .grilla { 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  /* Ficha de producto en dos columnas: galería | datos */
+  .producto-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--esp-xl);
+    align-items: start;
+    padding: var(--esp-lg) var(--esp-md);
+  }
+  .producto-layout .galeria { position: sticky; top: var(--esp-lg); }
+  .producto-info { padding: 0; }
+}
+
+@media (min-width: 1000px) {
+  .grilla { grid-template-columns: repeat(4, 1fr); }
+}

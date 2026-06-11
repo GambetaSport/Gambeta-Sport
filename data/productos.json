@@ -1,0 +1,80 @@
+[
+  {
+    "id": "pro-training-v2",
+    "nombre": "Pro Training V2",
+    "categoria": "Entrenamiento",
+    "activo": true,
+    "telas": ["DryFit", "Mesh"],
+    "colores": ["Negro", "Azul"],
+    "imagenes": {
+      "mockup": "",
+      "real": "",
+      "detalle": ""
+    }
+  },
+  {
+    "id": "air-series",
+    "nombre": "Air Series",
+    "categoria": "Running",
+    "activo": true,
+    "telas": ["Mesh"],
+    "colores": ["Negro", "Verde"],
+    "imagenes": {
+      "mockup": "",
+      "real": "",
+      "detalle": ""
+    }
+  },
+  {
+    "id": "classic-fit",
+    "nombre": "Classic Fit",
+    "categoria": "Casual",
+    "activo": true,
+    "telas": ["Algodón"],
+    "colores": ["Blanco", "Negro"],
+    "imagenes": {
+      "mockup": "",
+      "real": "",
+      "detalle": ""
+    }
+  },
+  {
+    "id": "polo-sport",
+    "nombre": "Polo Sport",
+    "categoria": "Tenis",
+    "activo": true,
+    "telas": ["Piqué"],
+    "colores": ["Blanco", "Rojo"],
+    "imagenes": {
+      "mockup": "",
+      "real": "",
+      "detalle": ""
+    }
+  },
+  {
+    "id": "elite-compression",
+    "nombre": "Elite Compression",
+    "categoria": "Entrenamiento",
+    "activo": true,
+    "telas": ["DryFit"],
+    "colores": ["Negro", "Rojo"],
+    "imagenes": {
+      "mockup": "",
+      "real": "",
+      "detalle": ""
+    }
+  },
+  {
+    "id": "urban-tee",
+    "nombre": "Urban Tee",
+    "categoria": "Casual",
+    "activo": true,
+    "telas": ["Algodón", "Mesh"],
+    "colores": ["Amarillo", "Negro"],
+    "imagenes": {
+      "mockup": "",
+      "real": "",
+      "detalle": ""
+    }
+  }
+]
