@@ -47,11 +47,14 @@ const Componentes = {
   },
 
   /* Un mosaico de tela en la ficha de producto. */
-  tela(nombre) {
-    return `
-      <div class="tela">
-        ${this.iconoRemera()}
-        <div class="tela__nombre">${nombre}</div>
-      </div>`;
-  }
+ tela(nombre, imagen) {
+  const contenido = imagen 
+    ? `<img src="${imagen}" alt="${nombre}" style="width:100%; height:60px; object-fit: contain; border-radius: 4px;">`
+    : this.iconoRemera();
+  return `
+    <div class="tela">
+      ${contenido}
+      <div class="tela__nombre">${nombre}</div>
+    </div>`;
+}
 };
