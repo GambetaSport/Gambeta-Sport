@@ -47,9 +47,9 @@ const Componentes = {
   },
 
   /* Un mosaico de tela en la ficha de producto. */
- tela(nombre, imagen) {
+tela(nombre, imagen) {
   const contenido = imagen 
-    ? `<img src="${imagen}" alt="${nombre}" style="width:100%; height:60px; object-fit: contain; border-radius: 4px;">`
+    ? `<img src="${imagen}" alt="${nombre}" style="width:100%; height:60px; object-fit: contain; border-radius: 4px; cursor:pointer;" onclick="abrirModalTela('${imagen}', '${nombre}')">`
     : this.iconoRemera();
   return `
     <div class="tela">
