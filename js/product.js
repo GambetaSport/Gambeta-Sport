@@ -111,4 +111,25 @@ const Producto = {
   }
 };
 
+/* Abrir modal de tela */
+function abrirModalTela(src, nombre) {
+  const modal = document.getElementById("modal-tela");
+  document.getElementById("modal-tela-img").src = src;
+  document.getElementById("modal-tela-nombre").textContent = nombre;
+  modal.style.display = "flex";
+}
+
+/* Cerrar modal de tela */
+function cerrarModalTela() {
+  document.getElementById("modal-tela").style.display = "none";
+}
+
+/* Cerrar modal al tocar fuera */
+document.addEventListener("click", (e) => {
+  const modal = document.getElementById("modal-tela");
+  if (e.target === modal) {
+    cerrarModalTela();
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => Producto.iniciar());
