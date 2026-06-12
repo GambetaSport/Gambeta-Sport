@@ -61,5 +61,13 @@
   <script src="js/data.js"></script>
   <script src="js/components.js"></script>
   <script src="js/product.js"></script>
+  <!-- Modal para ver telas en grande -->
+<div id="modal-tela" class="modal-tela" style="display:none;">
+  <div class="modal-tela-contenido">
+    <button class="modal-tela-cerrar" onclick="cerrarModalTela()">✕</button>
+    <img id="modal-tela-img" src="" alt="Tela" style="max-width:100%; max-height:90vh; object-fit: contain;">
+    <div id="modal-tela-nombre" style="text-align:center; margin-top:16px; color:var(--texto); font-weight:500;"></div>
+  </div>
+</div>
 </body>
 </html>
