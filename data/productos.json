@@ -21,161 +21,182 @@
     "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["Mesh"],
+    "telas": ["DryFit", "Mesh"],
     "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
       "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
     },
-    "colores": ["Negro", "Verde"],
+    "colores": ["Negro", "Naranja", "Blanco"],
     "imagenes": {
       "mockup": "https://i.ibb.co/x833F9CV/SAN-FRANCISCO-3.jpg",
-      "real": "https://i.ibb.co/x833F9CV/SAN-FRANCISCO-3.jpg",
-      "detalle": "https://i.ibb.co/x833F9CV/SAN-FRANCISCO-3.jpg"
+      "real": "https://i.ibb.co/N6NrCsB4/Mapa-de-bits-17.jpg",
+      "detalle": "https://i.ibb.co/N6NrCsB4/Mapa-de-bits-17.jpg"
     }
   },
   {
-    "id": "classic-fit",
-    "nombre": "Classic Fit",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["Algodón"],
-    "telasImagenes": {},
-    "colores": ["Blanco", "Negro"],
+    "telas": ["DryFit", "Mesh"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
+    "colores": ["Blanco", "Naranja"],
     "imagenes": {
       "mockup": "https://i.ibb.co/nNYvQw5z/SAN-FRANCISCO.jpg",
-      "real": "https://i.ibb.co/nNYvQw5z/SAN-FRANCISCO.jpg",
-      "detalle": "https://i.ibb.co/nNYvQw5z/SAN-FRANCISCO.jpg"
+      "real": "https://i.ibb.co/nMzsRHwG/Mapa-de-bits-12.jpg",
+      "detalle": "https://i.ibb.co/nMzsRHwG/Mapa-de-bits-12.jpg"
     }
   },
   {
-    "id": "polo-sport",
-    "nombre": "Polo Sport",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["Piqué"],
-    "telasImagenes": {},
+    "telas": ["DryFit", "Mesh"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
     "colores": ["Blanco", "Rojo"],
     "imagenes": {
       "mockup": "https://i.ibb.co/Z11KN9Vp/SAN-LORENZO.jpg",
-      "real": "https://i.ibb.co/Z11KN9Vp/SAN-LORENZO.jpg",
-      "detalle": "https://i.ibb.co/Z11KN9Vp/SAN-LORENZO.jpg"
+      "real": "https://i.ibb.co/XZFKFHbP/Mapa-de-bits-14.jpg",
+      "detalle": "https://i.ibb.co/XZFKFHbP/Mapa-de-bits-14.jpg"
     }
   },
   {
-    "id": "elite-compression",
-    "nombre": "Elite Compression",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["DryFit"],
+    "telas": ["DryFit", "Mesh"],
     "telasImagenes": {
-      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg"
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
     },
     "colores": ["Negro", "Rojo"],
     "imagenes": {
       "mockup": "https://i.ibb.co/yFRhT6tH/SAN-LORENZO1.jpg",
-      "real": "https://i.ibb.co/yFRhT6tH/SAN-LORENZO1.jpg",
-      "detalle": "https://i.ibb.co/yFRhT6tH/SAN-LORENZO1.jpg"
+      "real": "https://i.ibb.co/yBkKdBPR/Mapa-de-bits-9.jpg",
+      "detalle": "https://i.ibb.co/yBkKdBPR/Mapa-de-bits-9.jpg"
     }
   },
   {
-    "id": "urban-tee",
-    "nombre": "Urban Tee",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["Algodón", "Mesh"],
+    "telas": ["DryFit", "Mesh"],
     "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
       "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
     },
-    "colores": ["Amarillo", "Negro"],
+    "colores": ["Celeste", "Blanco"],
     "imagenes": {
       "mockup": "https://i.ibb.co/fVq1PZFY/8-de-Diciembre-3.jpg",
-      "real": "https://i.ibb.co/fVq1PZFY/8-de-Diciembre-3.jpg",
-      "detalle": "https://i.ibb.co/fVq1PZFY/8-de-Diciembre-3.jpg"
+      "real": "https://i.ibb.co/cKLSVkzY/Mapa-de-bits-7.jpg",
+      "detalle": "https://i.ibb.co/cKLSVkzY/Mapa-de-bits-7.jpg"
     }
   },
   {
-    "id": "sport-flex",
-    "nombre": "Sport Flex",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["DryFit"],
+    "telas": ["DryFit", "Mesh"],
     "telasImagenes": {
-      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg"
-    },
-    "colores": ["Negro"],
-    "imagenes": {
-      "mockup": "https://i.ibb.co/pmWW47m/8-de-Diciembre-4.jpg",
-      "real": "https://i.ibb.co/pmWW47m/8-de-Diciembre-4.jpg",
-      "detalle": "https://i.ibb.co/pmWW47m/8-de-Diciembre-4.jpg"
-    }
-  },
-  {
-    "id": "comfort-plus",
-    "nombre": "Comfort Plus",
-    "categoria": "Equipo Deportivo",
-    "activo": true,
-    "telas": ["Algodón"],
-    "telasImagenes": {},
-    "colores": ["Blanco"],
-    "imagenes": {
-      "mockup": "https://i.ibb.co/1fXw5QVV/13-DE-JULIO-1.jpg",
-      "real": "https://i.ibb.co/1fXw5QVV/13-DE-JULIO-1.jpg",
-      "detalle": "https://i.ibb.co/1fXw5QVV/13-DE-JULIO-1.jpg"
-    }
-  },
-  {
-    "id": "performance-max",
-    "nombre": "Performance Max",
-    "categoria": "Equipo Deportivo",
-    "activo": true,
-    "telas": ["Mesh"],
-    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
       "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
     },
-    "colores": ["Azul"],
+    "colores": ["Celeste", "Blanco"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/pmWW47m/8-de-Diciembre-4.jpg",
+      "real": "https://i.ibb.co/jkYnjjK8/Mapa-de-bits-18.jpg",
+      "detalle": "https://i.ibb.co/jkYnjjK8/Mapa-de-bits-18.jpg"
+    }
+  },
+  {
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
+    "categoria": "Equipo Deportivo",
+    "activo": true,
+    "telas": ["DryFit", "Mesh"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
+    "colores": ["Verde", "Blanco"],
+    "imagenes": {
+      "mockup": "https://i.ibb.co/1fXw5QVV/13-DE-JULIO-1.jpg",
+      "real": "https://i.ibb.co/CfpJ96q/Mapa-de-bits-4.jpg",
+      "detalle": "https://i.ibb.co/CfpJ96q/Mapa-de-bits-4.jpg"
+    }
+  },
+  {
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
+    "categoria": "Equipo Deportivo",
+    "activo": true,
+    "telas": ["DryFit", "Mesh"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
+    "colores": ["Verde", "Blanco"],
     "imagenes": {
       "mockup": "https://i.ibb.co/fYd6NHgg/13-DE-JULIO-2.jpg",
-      "real": "https://i.ibb.co/fYd6NHgg/13-DE-JULIO-2.jpg",
-      "detalle": "https://i.ibb.co/fYd6NHgg/13-DE-JULIO-2.jpg"
+      "real": "https://i.ibb.co/hJS9M9Lz/Mapa-de-bits-13.jpg",
+      "detalle": "https://i.ibb.co/hJS9M9Lz/Mapa-de-bits-13.jpg"
     }
   },
   {
-    "id": "stylish-wear",
-    "nombre": "Stylish Wear",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["Algodón"],
-    "telasImagenes": {},
-    "colores": ["Verde"],
+    "telas": ["DryFit", "Mesh"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
+    "colores": ["Rojo", "Blanco"],
     "imagenes": {
       "mockup": "https://i.ibb.co/wrMzRZMJ/14-DE-MAYO-J.jpg",
-      "real": "https://i.ibb.co/wrMzRZMJ/14-DE-MAYO-J.jpg",
-      "detalle": "https://i.ibb.co/wrMzRZMJ/14-DE-MAYO-J.jpg"
+      "real": "https://i.ibb.co/QF7Y5YGZ/Mapa-de-bits-6.jpg",
+      "detalle": "https://i.ibb.co/QF7Y5YGZ/Mapa-de-bits-6.jpg"
     }
   },
   {
-    "id": "active-zone",
-    "nombre": "Active Zone",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["DryFit"],
+    "telas": ["DryFit", "Mesh"],
     "telasImagenes": {
-      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg"
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
     },
-    "colores": ["Rojo"],
+    "colores": ["Rojo", "Blanco"],
     "imagenes": {
       "mockup": "https://i.ibb.co/B2WLkrH2/14-DE-MAYO-P.jpg",
-      "real": "https://i.ibb.co/B2WLkrH2/14-DE-MAYO-P.jpg",
-      "detalle": "https://i.ibb.co/B2WLkrH2/14-DE-MAYO-P.jpg"
+      "real": "https://i.ibb.co/39zqcY89/Mapa-de-bits-11.jpg",
+      "detalle": "https://i.ibb.co/39zqcY89/Mapa-de-bits-11.jpg"
     }
   },
   {
-    "id": "essential-basic",
-    "nombre": "Essential Basic",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["Algodón"],
-    "telasImagenes": {},
-    "colores": ["Negro"],
+    "telas": ["DryFit", "Mesh"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
+    "colores": ["Negro", "Verde"],
     "imagenes": {
       "mockup": "https://i.ibb.co/XxL8L6b6/Club-puerto.jpg",
       "real": "https://i.ibb.co/XxL8L6b6/Club-puerto.jpg",
@@ -183,12 +204,15 @@
     }
   },
   {
-    "id": "premium-fit",
-    "nombre": "Premium Fit",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["Piqué"],
-    "telasImagenes": {},
+    "telas": ["DryFit", "Mesh"],
+    "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
+      "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
+    },
     "colores": ["Azul"],
     "imagenes": {
       "mockup": "https://i.ibb.co/ccWdDdJp/DIEGO.png",
@@ -197,19 +221,20 @@
     }
   },
   {
-    "id": "venture-series",
-    "nombre": "Venture Series",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
-    "telas": ["Mesh"],
+    "telas": ["DryFit", "Mesh"],
     "telasImagenes": {
+      "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
       "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
     },
     "colores": ["Amarillo"],
     "imagenes": {
       "mockup": "https://i.ibb.co/QvSLm9mL/palmital.jpg",
-      "real": "https://i.ibb.co/QvSLm9mL/palmital.jpg",
-      "detalle": "https://i.ibb.co/QvSLm9mL/palmital.jpg"
+      "real": "https://i.ibb.co/FCjyZQC/Mapa-de-bits.jpg",
+      "detalle": "https://i.ibb.co/FCjyZQC/Mapa-de-bits.jpg"
     }
   }
 ]
