@@ -20,7 +20,7 @@ const CONFIG = {
   // Vacío ("")  -> lee data/productos.json (modo desarrollo / Fase 1-3)
   // URL          -> lee del Apps Script que sirve el Google Sheet (Fase 4)
   // Cambiar esto NO requiere tocar ningún otro archivo.
-  fuenteDatos: "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnT9H1Z_JsuXgmo2qdLoyep0ZnndWO0HsS3P0exhJrmm-pYhum3GFmu5dgFMzNb3HIr6fM8t9DMybeS9KwqnQi9wOW4U05_KhkPhOc9XuSYp0WQahjapHdev9XoEGN54i7EM32NTBH4z2Y0x74NeoM9vWiN9KDRjFZ4KO3X5Ci189N7HBPNYIx1xWazry5qSu5EEdhthsrWiYuxuMbjeS7u0MSBg-bRvOl1lA9bXD835s1uOtN3pRwWtXtrH-5ORNElPxXfMidR3Tgv4TtY&lib=MEAqJmW0B24DcF8-QES8L908jPqgvzQIJ",
+  fuenteDatos: "https://script.google.com/macros/s/AKfycbwUc78DKGTP3AM7HAZmQH4wHnLMdz2MWj-mskqZUdyqA11ifZXD5kRmcIyR6woWE3Zn/exec",
 
   /* --- Paleta de la marca --- */
   // Estos valores se inyectan como variables CSS al cargar la página.
