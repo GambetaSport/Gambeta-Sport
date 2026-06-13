@@ -20,7 +20,7 @@ const CONFIG = {
   // Vacío ("")  -> lee data/productos.json (modo desarrollo / Fase 1-3)
   // URL          -> lee del Apps Script que sirve el Google Sheet (Fase 4)
   // Cambiar esto NO requiere tocar ningún otro archivo.
-  fuenteDatos: "",
+  fuenteDatos: "https://script.google.com/macros/s/AKfycbzGbsB7alx0NLr3-6dEGdWqJMYS0Ne9zrkc93IF3mwSA-wk9He1SAWMnmjQTpL6hGwd/exec",
 
   /* --- Paleta de la marca --- */
   // Estos valores se inyectan como variables CSS al cargar la página.
