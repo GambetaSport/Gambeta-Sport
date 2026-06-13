@@ -1,21 +1,13 @@
-/* ============================================================
-   config.js  —  CONFIGURACIÓN DEL CLIENTE
-   ------------------------------------------------------------
-   Este es el ÚNICO archivo que cambiás para un cliente nuevo.
-   Marca, colores, WhatsApp, fuente de datos: todo acá.
-   El resto del código no se toca.
-   ============================================================ */
-
 const CONFIG = {
 
   /* --- Identidad de marca --- */
   marca: "GAMBETA",
-  subtitulo: "SPORT · INDUMENTARIA",
+  subtitulo: "EQUIPOS DEPORTIVOS DE CALIDAD",
 
   /* --- Contacto --- */
   // Número de WhatsApp en formato internacional, sin + ni espacios.
   // Paraguay: 595 + número sin el 0 inicial. Ej: 0981 234 567 -> 595981234567
-  whatsapp: "595981234567",
+  whatsapp: "595973687976",
   fraseBoton: "Solicita tu presupuesto",
 
   /* --- Imágenes (Cloudinary) --- */
