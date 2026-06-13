@@ -1,7 +1,7 @@
 [
   {
-    "id": "pro-training-v2",
-    "nombre": "Pro Training V2",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["DryFit", "Mesh"],
@@ -9,16 +9,16 @@
       "DryFit": "https://i.ibb.co/8ghsPp5K/tela-dry.jpg",
       "Mesh": "https://i.ibb.co/XZYQFgPQ/tela-micro.jpg"
     },
-    "colores": ["Negro", "Azul"],
+    "colores": ["Blanco", "Violeta", "Lila"],
     "imagenes": {
       "mockup": "https://i.ibb.co/Y46pDQg6/SAM-JOSE-OBRERO.jpg",
-      "real": "https://i.ibb.co/Y46pDQg6/SAM-JOSE-OBRERO.jpg",
-      "detalle": "https://i.ibb.co/Y46pDQg6/SAM-JOSE-OBRERO.jpg"
+      "real": "https://i.ibb.co/3mYH508F/Mapa-de-bits-5.jpg",
+      "detalle": "https://i.ibb.co/3mYH508F/Mapa-de-bits-5.jpg"
     }
   },
   {
-    "id": "air-series",
-    "nombre": "Air Series",
+    "id": "Remera Deportiva",
+    "nombre": "Liga Carlense",
     "categoria": "Equipo Deportivo",
     "activo": true,
     "telas": ["Mesh"],
