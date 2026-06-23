@@ -1,6 +1,42 @@
 /* ============================================================
    catalog.js  —  LÓGICA DE LA PÁGINA PRINCIPAL
+   - Buscador: busca por nombre, categoría, color y tela
+   - Filtro de colores: se genera solo desde los productos
    ============================================================ */
+
+/* Diccionario de colores: nombre (en minúscula) -> color real.
+   Si un color no está acá, usa un gris neutro.
+   Podés agregar más cuando quieras. */
+const COLORES_HEX = {
+  "negro": "#1a1a1a",
+  "blanco": "#f5f5f5",
+  "rojo": "#d32f2f",
+  "azul": "#1976d2",
+  "azul marino": "#1a237e",
+  "marino": "#1a237e",
+  "celeste": "#4fc3f7",
+  "verde": "#388e3c",
+  "amarillo": "#fbc02d",
+  "naranja": "#f57c00",
+  "gris": "#9e9e9e",
+  "rosa": "#ec407a",
+  "rosado": "#ec407a",
+  "violeta": "#7b1fa2",
+  "morado": "#7b1fa2",
+  "lila": "#b39ddb",
+  "bordo": "#800020",
+  "bordó": "#800020",
+  "vinotinto": "#800020",
+  "dorado": "#FAC775",
+  "plateado": "#c0c0c0",
+  "marron": "#6d4c41",
+  "marrón": "#6d4c41",
+  "cafe": "#6d4c41",
+  "café": "#6d4c41",
+  "turquesa": "#1abc9c",
+  "fucsia": "#e91e63",
+  "beige": "#d7ccc8"
+};
 
 const Catalogo = {
   productos: [],
@@ -9,12 +45,12 @@ const Catalogo = {
 
   async iniciar() {
     this._pintarMarca();
-    this._pintarFiltro();
     this._conectarEventos();
     this._mostrarCargando();
 
     try {
       this.productos = await Datos.obtenerProductos();
+      this._pintarFiltro();   // se genera con los colores reales
       this._render();
     } catch (error) {
       console.error(error);
@@ -40,9 +76,32 @@ const Catalogo = {
     document.title = CONFIG.marca + " — Catálogo";
   },
 
+  _hexColor(nombre) {
+    const clave = (nombre || "").toLowerCase().trim();
+    return COLORES_HEX[clave] || "#9e9e9e";
+  },
+
   _pintarFiltro() {
     const panel = document.getElementById("filtro-panel");
-    panel.innerHTML = CONFIG.coloresFiltro.map(c => Componentes.filtroColor(c)).join("");
+
+    // Recolectar todos los colores únicos de los productos
+    const set = new Set();
+    this.productos.forEach(p => {
+      (p.colores || []).forEach(c => {
+        const limpio = (c || "").trim();
+        if (limpio) set.add(limpio);
+      });
+    });
+    const colores = Array.from(set).sort();
+
+    if (colores.length === 0) {
+      panel.innerHTML = `<div style="color:var(--texto-suave); font-size:13px; padding:8px;">Sin colores cargados</div>`;
+      return;
+    }
+
+    panel.innerHTML = colores.map(nombre => {
+      return Componentes.filtroColor({ nombre: nombre, valor: this._hexColor(nombre) });
+    }).join("");
   },
 
   _conectarEventos() {
@@ -83,15 +142,22 @@ const Catalogo = {
   },
 
   _filtrar() {
+    const texto = this.textoBusqueda;
     return this.productos.filter(p => {
+      // Texto: busca en nombre, categoría, colores y telas
+      const colores = (p.colores || []).join(" ").toLowerCase();
+      const telas = (p.telas || []).join(" ").toLowerCase();
       const coincideTexto =
-        !this.textoBusqueda ||
-        p.nombre.toLowerCase().includes(this.textoBusqueda) ||
-        (p.categoria || "").toLowerCase().includes(this.textoBusqueda);
+        !texto ||
+        p.nombre.toLowerCase().includes(texto) ||
+        (p.categoria || "").toLowerCase().includes(texto) ||
+        colores.includes(texto) ||
+        telas.includes(texto);
 
+      // Filtro de color seleccionado
       const coincideColor =
         !this.filtroColor ||
-        (p.colores && p.colores.includes(this.filtroColor));
+        (p.colores && p.colores.indexOf(this.filtroColor) !== -1);
 
       return coincideTexto && coincideColor;
     });
