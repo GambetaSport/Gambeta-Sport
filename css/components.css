@@ -292,3 +292,152 @@
 .modal-tela-cerrar:hover {
   color: var(--acento);
 }
+/* ============================================================
+   animaciones.css — Mejoras estéticas GAMBETA
+   Pegá TODO esto al final de tu css/components.css
+   ============================================================ */
+
+/* --- 1. ANIMACIÓN DE CARGA: pelota girando --- */
+.cargando-pelota {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  gap: 16px;
+}
+.pelota {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, #fff 0%, #e8e8e8 40%, #999 100%);
+  position: relative;
+  animation: girar 0.8s linear infinite;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.pelota::before,
+.pelota::after {
+  content: "";
+  position: absolute;
+  background: #111;
+}
+.pelota::before {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(50% 0%, 80% 25%, 70% 60%, 30% 60%, 20% 25%);
+}
+.pelota::after {
+  width: 100%; height: 3px;
+  top: 50%; left: 0;
+  transform: translateY(-50%);
+  opacity: 0.15;
+}
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.cargando-texto {
+  color: var(--texto-suave);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: parpadeo 1.2s ease-in-out infinite;
+}
+@keyframes parpadeo {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* --- 2. SHIMMER en cards mientras carga la imagen --- */
+.card__imagen.cargando {
+  background: linear-gradient(90deg, var(--superficie-2) 0%, #2a2a2a 50%, var(--superficie-2) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* --- 3. ENTRADA de los productos (aparecen desde abajo) --- */
+.card {
+  animation: aparecer 0.5s ease both;
+}
+.card:nth-child(1) { animation-delay: 0.02s; }
+.card:nth-child(2) { animation-delay: 0.06s; }
+.card:nth-child(3) { animation-delay: 0.10s; }
+.card:nth-child(4) { animation-delay: 0.14s; }
+.card:nth-child(5) { animation-delay: 0.18s; }
+.card:nth-child(6) { animation-delay: 0.22s; }
+.card:nth-child(7) { animation-delay: 0.26s; }
+.card:nth-child(8) { animation-delay: 0.30s; }
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 4. DESTELLO dorado en el fondo del header --- */
+.header {
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: -50%; left: -100%;
+  width: 60%; height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(250, 199, 117, 0.08), transparent);
+  transform: rotate(25deg);
+  animation: destello 5s ease-in-out infinite;
+}
+@keyframes destello {
+  0% { left: -100%; }
+  50%, 100% { left: 150%; }
+}
+
+/* --- 5. EFECTO RIPPLE al tocar las cards --- */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
+  border-radius: 50%;
+  background: rgba(250, 199, 117, 0.3);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.card:active::after {
+  width: 200%; height: 200%;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+/* --- 6. PULSO en el botón de WhatsApp --- */
+.boton-whatsapp {
+  position: relative;
+  animation: pulso 2.5s ease-in-out infinite;
+}
+@keyframes pulso {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+/* --- 7. TRANSICIÓN suave al cambiar de vista en producto --- */
+.galeria__imagen img {
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- 8. Las imágenes hacen un fade al cargar --- */
+.card__imagen img {
+  animation: fadeIn 0.5s ease;
+}
