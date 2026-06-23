@@ -8,14 +8,14 @@ const Componentes = {
      - w: ancho máximo en píxeles
      - q: calidad (1-100)
      Esto reduce el peso y acelera la carga sin tocar las fotos originales. */
-  optimizar(url, ancho) {
+ optimizar(url, ancho) {
     if (!url) return "";
-    // Si ya está optimizada o está vacía, la devuelve tal cual
+    // La tela Mesh no se optimiza (wsrv no la procesa bien)
+    if (url.indexOf("tela-micro") !== -1) return url;
     if (url.indexOf("wsrv.nl") !== -1) return url;
     const limpia = url.replace(/^https?:\/\//, "");
     return `https://wsrv.nl/?url=${encodeURIComponent(limpia)}&w=${ancho}&q=75&output=webp`;
   },
-
   iconoRemera() {
     return `<svg viewBox="0 0 24 24" fill="none" stroke="var(--texto-suave)"
               stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
