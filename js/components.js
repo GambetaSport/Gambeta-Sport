@@ -1,117 +1,63 @@
 /* ============================================================
-   catalog.js  —  LÓGICA DE LA PÁGINA PRINCIPAL
+   components.js  —  GENERADORES DE HTML
    ============================================================ */
 
-const Catalogo = {
-  productos: [],
-  filtroColor: null,
-  textoBusqueda: "",
+const Componentes = {
 
-  async iniciar() {
-    this._pintarMarca();
-    this._pintarFiltro();
-    this._conectarEventos();
-    this._mostrarCargando();
-
-    try {
-      this.productos = await Datos.obtenerProductos();
-      this._render();
-    } catch (error) {
-      console.error(error);
-      this._mostrarError();
-    }
+  /* Optimiza una URL de imagen pasándola por wsrv.nl
+     - w: ancho máximo en píxeles
+     - q: calidad (1-100)
+     Esto reduce el peso y acelera la carga sin tocar las fotos originales. */
+  optimizar(url, ancho) {
+    if (!url) return "";
+    // Si ya está optimizada o está vacía, la devuelve tal cual
+    if (url.indexOf("wsrv.nl") !== -1) return url;
+    const limpia = url.replace(/^https?:\/\//, "");
+    return `https://wsrv.nl/?url=${encodeURIComponent(limpia)}&w=${ancho}&q=75&output=webp`;
   },
 
-  _mostrarCargando() {
-    document.getElementById("grilla").innerHTML = `
-      <div class="cargando-pelota" style="grid-column: 1 / -1;">
-        <div class="pelota"></div>
-        <div class="cargando-texto">Cargando diseños</div>
+  iconoRemera() {
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="var(--texto-suave)"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 4l6 2v5h-3v8a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-8H3V6l6-2a3 3 0 0 0 6 0"/>
+            </svg>`;
+  },
+
+  imagenProducto(producto, vista, claseImg, clasePlaceholder, ancho) {
+    const urlOriginal = producto.imagenes && producto.imagenes[vista];
+    if (urlOriginal) {
+      const url = this.optimizar(urlOriginal, ancho || 800);
+      return `<img src="${url}" alt="${producto.nombre} — ${vista}"
+                   class="${claseImg}" loading="lazy"
+                   onerror="this.outerHTML='<div class=\\'${clasePlaceholder}\\'>${this.iconoRemera()}</div>'">`;
+    }
+    return `<div class="${clasePlaceholder}">${this.iconoRemera()}</div>`;
+  },
+
+  card(producto) {
+    const imagen = this.imagenProducto(producto, "mockup", "", "card__placeholder", 500);
+    return `
+      <a class="card" href="producto.html?id=${producto.id}" aria-label="${producto.nombre}">
+        <div class="card__imagen">${imagen}</div>
+      </a>`;
+  },
+
+  filtroColor(color) {
+    return `
+      <button class="filtro__color" data-color="${color.nombre}" type="button">
+        <span class="filtro__color-dot" style="background:${color.valor}"></span>
+        <span class="filtro__color-nombre">${color.nombre}</span>
+      </button>`;
+  },
+
+  tela(nombre, imagen) {
+    const contenido = imagen
+      ? `<img src="${this.optimizar(imagen, 200)}" alt="${nombre}" style="width:100%; height:60px; object-fit: contain; border-radius: 4px; cursor:pointer;" onclick="abrirModalTela('${imagen}', '${nombre}')">`
+      : this.iconoRemera();
+    return `
+      <div class="tela">
+        ${contenido}
+        <div class="tela__nombre">${nombre}</div>
       </div>`;
-  },
-
-  _pintarMarca() {
-    const marca = document.getElementById("marca");
-    if (marca && marca.tagName !== "IMG") {
-      marca.textContent = CONFIG.marca;
-    }
-    const subtitulo = document.getElementById("subtitulo");
-    if (subtitulo) subtitulo.textContent = CONFIG.subtitulo;
-    document.title = CONFIG.marca + " — Catálogo";
-  },
-
-  _pintarFiltro() {
-    const panel = document.getElementById("filtro-panel");
-    panel.innerHTML = CONFIG.coloresFiltro.map(c => Componentes.filtroColor(c)).join("");
-  },
-
-  _conectarEventos() {
-    const toggle = document.getElementById("filtro-toggle");
-    const panel = document.getElementById("filtro-panel");
-
-    toggle.addEventListener("click", () => {
-      const abierto = panel.classList.toggle("abierto");
-      toggle.setAttribute("aria-expanded", abierto);
-    });
-
-    panel.addEventListener("click", (e) => {
-      const boton = e.target.closest(".filtro__color");
-      if (!boton) return;
-      this._seleccionarColor(boton);
-    });
-
-    document.getElementById("buscador").addEventListener("input", (e) => {
-      this.textoBusqueda = e.target.value.toLowerCase().trim();
-      this._render();
-    });
-  },
-
-  _seleccionarColor(boton) {
-    const color = boton.dataset.color;
-    const yaActivo = boton.classList.contains("activo");
-
-    document.querySelectorAll(".filtro__color")
-      .forEach(b => b.classList.remove("activo"));
-
-    if (yaActivo) {
-      this.filtroColor = null;
-    } else {
-      boton.classList.add("activo");
-      this.filtroColor = color;
-    }
-    this._render();
-  },
-
-  _filtrar() {
-    return this.productos.filter(p => {
-      const coincideTexto =
-        !this.textoBusqueda ||
-        p.nombre.toLowerCase().includes(this.textoBusqueda) ||
-        (p.categoria || "").toLowerCase().includes(this.textoBusqueda);
-
-      const coincideColor =
-        !this.filtroColor ||
-        (p.colores && p.colores.includes(this.filtroColor));
-
-      return coincideTexto && coincideColor;
-    });
-  },
-
-  _render() {
-    const grilla = document.getElementById("grilla");
-    const visibles = this._filtrar();
-
-    if (visibles.length === 0) {
-      grilla.innerHTML = `<div class="vacio">No hay diseños que coincidan con tu búsqueda.</div>`;
-      return;
-    }
-    grilla.innerHTML = visibles.map(p => Componentes.card(p)).join("");
-  },
-
-  _mostrarError() {
-    document.getElementById("grilla").innerHTML =
-      `<div class="vacio">No se pudieron cargar los diseños. Intentá recargar la página.</div>`;
   }
 };
-
-document.addEventListener("DOMContentLoaded", () => Catalogo.iniciar());
