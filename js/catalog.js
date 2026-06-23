@@ -1,21 +1,17 @@
 /* ============================================================
    catalog.js  —  LÓGICA DE LA PÁGINA PRINCIPAL
-   ------------------------------------------------------------
-   Carga los productos, los dibuja en la grilla y maneja la
-   búsqueda y el filtro por color (desplegable).
    ============================================================ */
 
 const Catalogo = {
+  productos: [],
+  filtroColor: null,
+  textoBusqueda: "",
 
-  productos: [],          // todos los productos cargados
-  filtroColor: null,      // color seleccionado, o null = todos
-  textoBusqueda: "",      // texto del buscador
-
-  /* Punto de entrada: se llama al cargar la página. */
   async iniciar() {
     this._pintarMarca();
     this._pintarFiltro();
     this._conectarEventos();
+    this._mostrarCargando();
 
     try {
       this.productos = await Datos.obtenerProductos();
@@ -26,20 +22,29 @@ const Catalogo = {
     }
   },
 
-  /* Escribe el nombre y subtítulo de la marca en el header. */
+  _mostrarCargando() {
+    document.getElementById("grilla").innerHTML = `
+      <div class="cargando-pelota" style="grid-column: 1 / -1;">
+        <div class="pelota"></div>
+        <div class="cargando-texto">Cargando diseños</div>
+      </div>`;
+  },
+
   _pintarMarca() {
-    document.getElementById("marca").textContent = CONFIG.marca;
-    document.getElementById("subtitulo").textContent = CONFIG.subtitulo;
+    const marca = document.getElementById("marca");
+    if (marca && marca.tagName !== "IMG") {
+      marca.textContent = CONFIG.marca;
+    }
+    const subtitulo = document.getElementById("subtitulo");
+    if (subtitulo) subtitulo.textContent = CONFIG.subtitulo;
     document.title = CONFIG.marca + " — Catálogo";
   },
 
-  /* Dibuja los círculos de color del filtro a partir de config.js. */
   _pintarFiltro() {
     const panel = document.getElementById("filtro-panel");
     panel.innerHTML = CONFIG.coloresFiltro.map(c => Componentes.filtroColor(c)).join("");
   },
 
-  /* Conecta los eventos: toggle del filtro, clicks de color, búsqueda. */
   _conectarEventos() {
     const toggle = document.getElementById("filtro-toggle");
     const panel = document.getElementById("filtro-panel");
@@ -61,7 +66,6 @@ const Catalogo = {
     });
   },
 
-  /* Marca un color como activo (o lo desmarca si ya estaba). */
   _seleccionarColor(boton) {
     const color = boton.dataset.color;
     const yaActivo = boton.classList.contains("activo");
@@ -70,7 +74,7 @@ const Catalogo = {
       .forEach(b => b.classList.remove("activo"));
 
     if (yaActivo) {
-      this.filtroColor = null;          // vuelve a mostrar todos
+      this.filtroColor = null;
     } else {
       boton.classList.add("activo");
       this.filtroColor = color;
@@ -78,7 +82,6 @@ const Catalogo = {
     this._render();
   },
 
-  /* Aplica búsqueda + filtro y devuelve los productos visibles. */
   _filtrar() {
     return this.productos.filter(p => {
       const coincideTexto =
@@ -94,7 +97,6 @@ const Catalogo = {
     });
   },
 
-  /* Dibuja la grilla con los productos visibles. */
   _render() {
     const grilla = document.getElementById("grilla");
     const visibles = this._filtrar();
