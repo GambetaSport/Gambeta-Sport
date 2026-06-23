@@ -293,56 +293,58 @@
   color: var(--acento);
 }
 /* ============================================================
-   animaciones.css — Mejoras estéticas GAMBETA
+   animaciones.css — Mejoras estéticas GAMBETA (v2)
    Pegá TODO esto al final de tu css/components.css
+   (Si ya pegaste la versión anterior, borrala y poné esta)
    ============================================================ */
 
-/* --- 1. ANIMACIÓN DE CARGA: pelota girando --- */
+/* --- 1. ANIMACIÓN DE CARGA: pelota de fútbol girando --- */
 .cargando-pelota {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 60px 0;
-  gap: 16px;
+  gap: 18px;
 }
 .pelota {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 30%, #fff 0%, #e8e8e8 40%, #999 100%);
+  background: #fff;
   position: relative;
-  animation: girar 0.8s linear infinite;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  overflow: hidden;
+  animation: girar 0.9s linear infinite;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5), inset -6px -6px 14px rgba(0,0,0,0.15);
 }
-.pelota::before,
+/* Pentágono central negro */
+.pelota::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 20px; height: 20px;
+  background: #1a1a1a;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+}
+/* Parches negros alrededor (usando un fondo con gradientes radiales) */
 .pelota::after {
   content: "";
   position: absolute;
-  background: #111;
-}
-.pelota::before {
-  width: 14px; height: 14px;
-  border-radius: 50%;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  clip-path: polygon(50% 0%, 80% 25%, 70% 60%, 30% 60%, 20% 25%);
-}
-.pelota::after {
-  width: 100%; height: 3px;
-  top: 50%; left: 0;
-  transform: translateY(-50%);
-  opacity: 0.15;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% -5%, #1a1a1a 0 8px, transparent 9px),
+    radial-gradient(circle at -5% 75%, #1a1a1a 0 8px, transparent 9px),
+    radial-gradient(circle at 105% 75%, #1a1a1a 0 8px, transparent 9px);
 }
 @keyframes girar {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 .cargando-texto {
-  color: var(--texto-suave);
+  color: var(--acento);
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   animation: parpadeo 1.2s ease-in-out infinite;
 }
@@ -351,7 +353,7 @@
   50% { opacity: 1; }
 }
 
-/* --- 2. SHIMMER en cards mientras carga la imagen --- */
+/* --- 2. SHIMMER en cards mientras carga --- */
 .card__imagen.cargando {
   background: linear-gradient(90deg, var(--superficie-2) 0%, #2a2a2a 50%, var(--superficie-2) 100%);
   background-size: 200% 100%;
@@ -362,9 +364,11 @@
   100% { background-position: -200% 0; }
 }
 
-/* --- 3. ENTRADA de los productos (aparecen desde abajo) --- */
+/* --- 3. ENTRADA de los productos --- */
 .card {
   animation: aparecer 0.5s ease both;
+  position: relative;
+  overflow: hidden;
 }
 .card:nth-child(1) { animation-delay: 0.02s; }
 .card:nth-child(2) { animation-delay: 0.06s; }
@@ -379,7 +383,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- 4. DESTELLO dorado en el fondo del header --- */
+/* --- 4. DESTELLO dorado MÁS NOTORIO en el header --- */
 .header {
   position: relative;
   overflow: hidden;
@@ -387,22 +391,81 @@
 .header::before {
   content: "";
   position: absolute;
-  top: -50%; left: -100%;
-  width: 60%; height: 200%;
-  background: linear-gradient(90deg, transparent, rgba(250, 199, 117, 0.08), transparent);
-  transform: rotate(25deg);
-  animation: destello 5s ease-in-out infinite;
+  top: -50%; left: -120%;
+  width: 70%; height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(250, 199, 117, 0.25),
+    rgba(255, 230, 180, 0.45),
+    rgba(250, 199, 117, 0.25),
+    transparent
+  );
+  transform: rotate(22deg);
+  animation: destello 3.5s ease-in-out infinite;
+  pointer-events: none;
 }
 @keyframes destello {
-  0% { left: -100%; }
-  50%, 100% { left: 150%; }
+  0% { left: -120%; }
+  55%, 100% { left: 160%; }
 }
 
-/* --- 5. EFECTO RIPPLE al tocar las cards --- */
-.card {
+/* --- 5. FONDO ANIMADO en todo el catálogo (luces doradas suaves) --- */
+body {
   position: relative;
-  overflow: hidden;
 }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(250, 199, 117, 0.07), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(250, 199, 117, 0.05), transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(250, 199, 117, 0.06), transparent 40%);
+  animation: fondoVivo 12s ease-in-out infinite alternate;
+}
+@keyframes fondoVivo {
+  0% { transform: scale(1) translate(0, 0); opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { transform: scale(1.15) translate(-10px, -10px); opacity: 0.8; }
+}
+/* Asegura que el contenido quede por encima del fondo */
+.contenedor { position: relative; z-index: 1; }
+
+/* --- 6. BRILLO que recorre el borde de las cards --- */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radio-md);
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(250, 199, 117, 0.6) 50%,
+    transparent 70%
+  );
+  background-size: 250% 250%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.card:hover::before {
+  opacity: 1;
+  animation: brilloBorde 1.5s linear infinite;
+}
+@keyframes brilloBorde {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 250% 250%; }
+}
+
+/* --- 7. EFECTO RIPPLE al tocar las cards --- */
 .card::after {
   content: "";
   position: absolute;
@@ -412,13 +475,14 @@
   background: rgba(250, 199, 117, 0.3);
   transform: translate(-50%, -50%);
   pointer-events: none;
+  z-index: 3;
 }
 .card:active::after {
   width: 200%; height: 200%;
   transition: width 0.4s ease, height 0.4s ease;
 }
 
-/* --- 6. PULSO en el botón de WhatsApp --- */
+/* --- 8. PULSO en el botón de WhatsApp --- */
 .boton-whatsapp {
   position: relative;
   animation: pulso 2.5s ease-in-out infinite;
@@ -428,16 +492,27 @@
   50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
 }
 
-/* --- 7. TRANSICIÓN suave al cambiar de vista en producto --- */
-.galeria__imagen img {
-  animation: fadeIn 0.4s ease;
-}
+/* --- 9. TRANSICIÓN al cambiar de vista en producto --- */
+.galeria__imagen img { animation: fadeIn 0.4s ease; }
+.card__imagen img { animation: fadeIn 0.5s ease; }
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* --- 8. Las imágenes hacen un fade al cargar --- */
-.card__imagen img {
-  animation: fadeIn 0.5s ease;
+/* --- 10. El logo del header late suavemente y brilla --- */
+.header__logo-img {
+  animation: latido 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(250, 199, 117, 0.3));
 }
+@keyframes latido {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(250, 199, 117, 0.3)); }
+  50% { transform: scale(1.04); filter: drop-shadow(0 0 14px rgba(250, 199, 117, 0.6)); }
+}
+
+/* Respeta a quienes prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .header::before, body::before, .boton-whatsapp,
+  .header__logo-img, .card { animation: none; }
+}
+
