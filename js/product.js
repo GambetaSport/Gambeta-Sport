@@ -36,7 +36,7 @@ const Producto = {
     this._conectarVistas();
 
     this.telaElegida = (p.telas && p.telas[0]) || "";
-    this._actualizarBotonWhatsApp();
+   
   },
 
   _mostrarVista(vista) {
@@ -76,14 +76,10 @@ const Producto = {
           .forEach(t => t.style.borderColor = "var(--borde)");
         el.style.borderColor = "var(--acento)";
         this.telaElegida = telas[i];
-        this._actualizarBotonWhatsApp();
       });
     });
   },
 
-  _actualizarBotonWhatsApp() {
-    const boton = document.getElementById("boton-whatsapp");
-    boton.textContent = "";
 
     const texto =
       `Hola! Me interesa la remera *${this.datos.nombre}*.` +
