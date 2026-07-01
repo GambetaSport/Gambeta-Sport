@@ -515,4 +515,72 @@ body::before {
   .header::before, body::before, .boton-whatsapp,
   .header__logo-img, .card { animation: none; }
 }
+/* ============================================================
+   Badge "Diseño Exclusivo" — reemplaza al botón de WhatsApp
+   Pegá esto al final de css/components.css
+   ============================================================ */
+.badge-exclusivo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #161616 0%, #1e1a12 100%);
+  border: 1px solid rgba(250, 199, 117, 0.35);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+/* Brillo que recorre el badge */
+.badge-exclusivo::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(250, 199, 117, 0.18), transparent);
+  transform: rotate(22deg);
+  animation: badgeBrillo 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes badgeBrillo {
+  0% { left: -100%; }
+  55%, 100% { left: 160%; }
+}
+.badge-exclusivo__logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(250, 199, 117, 0.4));
+  animation: badgeLatido 4s ease-in-out infinite;
+}
+@keyframes badgeLatido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+.badge-exclusivo__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+  z-index: 1;
+}
+.badge-exclusivo__titulo {
+  color: var(--acento);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.badge-exclusivo__marca {
+  color: var(--texto-suave);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+@media (prefers-reduced-motion: reduce) {
+  .badge-exclusivo::before, .badge-exclusivo__logo { animation: none; }
+}
 
